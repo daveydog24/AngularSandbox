@@ -2,10 +2,11 @@
     <h1>Home Component</h1>
     <div class="row">
         <div class="col">
-            <p>Left</p>
+            <button (click)="onClick()">Display Details</button>
+            <p *ngIf="toggleOn === true">Left</p>
         </div>
         <div class="col">
-            <p>Right</p>
+            <p *ngFor="let click of clicks" [ngStyle]="{'background-color': findColor(click)}" [ngClass]="{large: click >= 5}"> Clicked {{click}} times</p>
         </div>
     </div>
 </div>
