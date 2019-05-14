@@ -6,7 +6,12 @@
             <p *ngIf="toggleOn === true">Left</p>
         </div>
         <div class="col">
-            <p *ngFor="let click of clicks" [ngStyle]="{'background-color': findColor(click)}" [ngClass]="{large: click >= 5}"> Clicked {{click}} times</p>
+            <p 
+                *ngFor="let click of clicks" 
+                [ngStyle]="{'background-color': findColor(click)}" 
+                [ngClass]="{large: click >= 5}"> 
+                Clicked {{click}} times
+            </p>
         </div>
     </div>
 </div>

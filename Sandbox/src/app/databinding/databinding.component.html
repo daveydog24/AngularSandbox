@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Data Binding Component</h2>
+            <button (click)="sendChild()">Copy Total from child to parent</button>
+            <h6>Output: {{ ChildsCount }}</h6>
+            <!-- <h6>Parents Count {{ParentsCount}}</h6> -->
+        </div>
+        <div class="col">
+            <button (click)="getTotal()">Get Total With Service</button>
+            <p>
+                {{totalFromService}}
+            </p> 
+        </div>
+    </div>
+</div>
