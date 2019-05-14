@@ -1,26 +1,28 @@
 <!-- <app-home></app-home> -->
 <!-- <router-outlet></router-outlet> -->
 
-<div class="container">
-        <div class="row">
-            <div class="col">
-                <h2>Parent Component</h2>
-                <button (click)="addOneToParent()">Add 1 to Parent</button>
-                <button (click)="addOneToBoth()">Add 1 to both</button>
-                <h6>Output: {{ ParentCount }}</h6>
-                
-            </div>
-            <div class="col">
-                <!-- input and output  -->
-                <app-databinding 
-                    [ParentsCount]="ParentCount" 
-                    [ChildsCount]="ChildCount" 
-                    (OutputCount)="childEvent($event)">
-                </app-databinding>
-            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2>Parent Component</h2>
+            <button (click)="addOneToParent()">Add 1 to Parent</button>
+            <button (click)="addOneToBoth()">Add 1 to both</button>
+            <h6>Output: {{ ParentCount }}</h6>
+            
         </div>
-        <p>-----------------------------------------------------------------------------------------------------------------------</p>
-        <div class="row">
+        <div class="col">
+            <!-- input and output  -->
+            <app-databinding 
+                [ParentsCount]="ParentCount" 
+                [ChildsCount]="ChildCount" 
+                (OutputCount)="childEvent($event)">
+            </app-databinding>
+        </div>
+    </div>
+    <p>-----------------------------------------------------------------------------------------------------------------------</p>
+    <div class="row">
+        <div class="col">
             <app-calculator></app-calculator>
         </div>
     </div>
+</div>
